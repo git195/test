@@ -21,7 +21,7 @@ export class AttachmentComponent implements OnInit, ElementComponentBase<Attachm
     autoUpload: false,
     disableMultipart: false,
     itemAlias: 'attachment',
-    maxFileSize: 10 * 1024 * 1024  // 10MB
+    maxFileSize: 5 * 1024 * 1024  // 5MB
   });
 
   constructor() { }
