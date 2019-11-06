@@ -1,0 +1,3 @@
+=> New file added to master.
+
+=> This should not exist in develop branch.
