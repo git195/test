@@ -1,0 +1,41 @@
+<div>
+    <div class="formFieldset" [formGroup]="formGroup">
+        <span class="input-group-addon ng-scope" *ngIf="!element.noIcon">
+            <i class="icon-cloud-upload"></i>
+        </span>
+        <span class="hidden-file">
+            <input type="file" #fileInput ng2FileSelect [uploader]="uploader" multiple (onFileSelected)="onFileSelected($event)" />
+        </span>
+        <div (click)="fileInput.click()" class="fileInput">
+            <input type="text" class="file-text" placeholder="Choose file..." disabled="">
+            <label class="custom-file-upload">Choose file</label>
+        </div>
+    </div>
+    <table class="table" *ngIf="uploader.queue.length">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>File Name</th>
+                <th>File Type</th>
+                <th>Size</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of uploader.queue; let i = index" (click)="showHideTextBoxTitle(i)">
+                <td>
+                    <ion-label *ngIf="i != show">{{ fileTitles[i] | split:'.' }}</ion-label>
+                    <div class="textboxShow" *ngIf="show == i">
+                        <ion-input type="text" name="title" maxlength="500" placeholder="Title" #fileText [(ngModel)]="fileTitles[i]"></ion-input>
+                    </div>
+                </td>
+                <td>{{ item?.file?.name }}</td>
+                <td>{{ item?.file?.type }}</td>
+                <td>{{ item?.file?.size/1024 | number:'.2' }} KB</td>
+                <td>
+                    <ion-button type="button" size="small" color="danger" (click)="removeFileFromQueue(i)">Delete</ion-button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

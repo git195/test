@@ -1,0 +1,29 @@
+<ion-content *ngIf="showForm" padding>
+  <header>
+    <img margin src="assets/images/solv_safety_logo.png" />
+    <hr>
+    <h3>Welcome</h3>
+    <h6>{{"Please sign in to continue" | uppercase}}</h6>
+  </header>
+  <form>
+    <ion-grid>
+      <ion-row>
+        <ion-col size-xs="12" size-md="4" offset-md="4" size-xl="2" offset-xl="5">
+          <ion-input name="signIn.username" placeholder="Username" type="text" [(ngModel)]="signIn.username">
+          </ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-xs="12" size-md="4" offset-md="4" size-xl="2" offset-xl="5">
+          <ion-input name="signIn.password" placeholder="Password" type="password" [(ngModel)]="signIn.password">
+          </ion-input>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-xs="12" size-md="4" offset-md="4" size-xl="2" offset-xl="5">
+          <ion-button color="success" expand="block" (click)="navigateToModules()">Sign in</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

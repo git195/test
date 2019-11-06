@@ -1,0 +1,27 @@
+h5 {
+    text-align: center;
+}
+
+i {
+    color: var(--ion-color-success);
+}
+
+ion-card-title {
+    font-size: 20px;
+}
+
+.logo-account {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    width: 100%;
+
+    h5 {
+        text-transform: uppercase;
+    }
+
+    img {
+        height: 4rem;
+    }
+}

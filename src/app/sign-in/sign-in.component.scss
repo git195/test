@@ -1,0 +1,34 @@
+form {
+
+    ion-button,
+    ion-input,
+    ion-label {
+        margin-top: 1.5rem;
+    }
+
+    ion-label {
+        font-size: smaller;
+        text-align: center;
+        text-decoration: underline;
+    }
+}
+
+header {
+    text-align: center;
+
+    h3 {
+        font-weight: bold;
+    }
+
+    h6 {
+        font-size: smaller;
+    }
+
+    hr {
+        background-color: lightgray;
+    }
+
+    img {
+        height: 5rem;
+    }
+}

@@ -1,0 +1,72 @@
+.input-group-addon i {
+    float: left;
+    color: #4c4c4c;
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 11px 16px;
+    border-right: 0;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+.formFieldset{
+    display: flex;
+    width: 100%;
+}
+
+.file-text{
+    padding: 8px 16px !important;
+    border: 1px solid #ccc !important;
+    border-radius: 0 !important;
+    resize: vertical;
+    width: 100%;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    margin-left: -1px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    width: 150px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-top: 15px;
+}
+th {
+    text-align: left;
+    padding: 5px;
+    line-height: 1.528571;
+}
+.table>tbody>tr>td {
+    padding: 5px;
+    border-top: 1px solid #ddd;
+    cursor: pointer;
+}
+ion-label {
+    font-weight: normal;
+}
+
+.fileInput {
+    width: 100%;
+    display: flex;
+}

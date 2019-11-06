@@ -1,0 +1,37 @@
+ion-list {
+    margin-bottom: 0;
+
+    ion-item {
+        font-size: 16px;
+        --padding-start: 0;
+        --inner-padding-end: 0;
+
+        &.date {
+            text-align: right;
+        }
+
+        ion-label.action {
+            margin-bottom: 1px;
+
+            ion-grid {
+                padding: 0;
+
+                ion-row {
+
+                    ion-col {
+                        padding: 0;
+
+                        ion-icon {
+                            padding-right: 3px;
+                        }
+    
+                        ion-label {
+                            font-size: 14px;
+                            font-weight: normal;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

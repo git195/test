@@ -1,0 +1,5 @@
+<div [formGroup]="formGroup">
+  <ion-select [formControlName]="element.key" [id]="element.key" placeholder="Select an option" [value]="element.value">
+    <ion-select-option *ngFor="let option of element.list" [value]="option.value">{{option.text}}</ion-select-option>
+  </ion-select>
+</div>

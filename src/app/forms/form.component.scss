@@ -1,0 +1,16 @@
+@import '../../theme/side-margin';
+
+ion-col {
+    padding-top: 0;
+
+    &.errors {
+        padding-top: 10px;
+        text-align: center;
+    }
+
+    ion-button {
+        margin-top: 10px;
+
+        @extend %side-margin-5px;
+    }
+}

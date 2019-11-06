@@ -1,0 +1,4 @@
+<div [formGroup]="formGroup">
+  <ion-input (ionFocus)="presentModal()" [formControlName]="element.key" [id]="element.key" [placeholder]="element.placeholder" [value]="businessUnit.name"></ion-input>
+  <input type="hidden" [formControlName]="businessUnitIdKey" [id]="businessUnitIdKey">
+</div>

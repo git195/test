@@ -1,0 +1,21 @@
+<ion-content #content>
+  <form [formGroup]="formGroup" *ngIf="formGroup" (ngSubmit)="onSubmit()" novalidate>
+    <ion-grid>
+      <ion-row *ngIf="!formGroup.valid && isSubmitted">
+        <ion-col class="errors" size-xs="12" size-md="8" offset-md="2" size-xl="6" offset-xl="3">
+          <ion-text color="danger">Please fix the errors below</ion-text>
+        </ion-col>
+      </ion-row>
+      <ion-row class="element" *ngFor="let element of elements">
+        <ion-col size-xs="12" size-md="8" offset-md="2" size-xl="6" offset-xl="3">
+          <app-section-heading [element]="element" [formGroup]="formGroup" [isSubmitted]="isSubmitted"></app-section-heading>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-xs="12" size-md="8" offset-md="2" size-xl="6" offset-xl="3">
+          <ion-button color="success" [disabled]="!formGroup.valid && isSubmitted" expand="block" type="submit">Save</ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

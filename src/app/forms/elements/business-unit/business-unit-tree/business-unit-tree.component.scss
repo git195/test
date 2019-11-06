@@ -1,0 +1,27 @@
+mat-tree {
+    &.mat-tree {
+
+        li,
+        ul {
+            list-style-type: none;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            &.mat-tree-invisible {
+                display: none;
+            }
+        }
+    }
+
+    button {
+        background: none;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    mat-icon {
+        border-radius: 50%;
+    }
+}

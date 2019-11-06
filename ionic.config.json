@@ -1,0 +1,8 @@
+{
+  "name": "SolvPWA",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

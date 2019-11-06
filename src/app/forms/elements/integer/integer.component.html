@@ -1,0 +1,13 @@
+<div [formGroup]="formGroup">
+  <ion-input
+    clear-input="true"
+    [formControlName]="element.key"
+    [id]="element.key"
+    (ionInput)="validateInteger($event)"
+    [max]="maximumValue"
+    [min]="minimumValue"
+    [placeholder]="element.placeholder"
+    [step]="step"
+    type="number">
+  </ion-input>
+</div>

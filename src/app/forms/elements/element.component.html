@@ -1,0 +1,28 @@
+<div [formGroup]="formGroup">
+    <ion-grid>
+        <ion-row>
+            <ion-col size="11">
+                <ion-label *ngIf="element.label" position="floating" text-wrap>
+                    {{element.label}} <ion-text color="danger" *ngIf="isRequired">*</ion-text>
+                </ion-label>
+            </ion-col>
+            <ion-col class="description" size="1">
+                <ion-icon (click)="showDescription($event)" color="success" name="information-circle-outline" *ngIf="description" size="small"></ion-icon>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col [ngClass]="{'form-heading': isFormHeading}">
+                <ng-template app-element-template></ng-template>
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col class="errors">
+                <ion-text color="danger" *ngIf="showInvalid">Invalid</ion-text>
+                <ion-text color="danger" *ngIf="showMaximumValueRequired">Maximum value is {{element.validation.maximumValue}}</ion-text>
+                <ion-text color="danger" *ngIf="showMinimumLengthRequired">Minimum length is {{element.validation.minimumLength}}</ion-text>
+                <ion-text color="danger" *ngIf="showMinimumValueRequired">Minimum value is {{element.validation.minimumValue}}</ion-text>
+                <ion-text color="danger" *ngIf="showRequired">Required</ion-text>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</div>

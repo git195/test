@@ -1,0 +1,66 @@
+// http://ionicframework.com/docs/theming/
+@import '~@ionic/angular/css/core.css';
+@import '~@ionic/angular/css/normalize.css';
+@import '~@ionic/angular/css/structure.css';
+@import '~@ionic/angular/css/typography.css';
+@import '~@ionic/angular/css/display.css';
+@import '~@ionic/angular/css/padding.css';
+@import '~@ionic/angular/css/float-elements.css';
+@import '~@ionic/angular/css/text-alignment.css';
+@import '~@ionic/angular/css/text-transformation.css';
+@import '~@ionic/angular/css/flex-utils.css';
+
+@import "~font-awesome/css/font-awesome.min.css";
+@import "~simple-line-icons/css/simple-line-icons.css";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+a {
+    &:link, &:visited, &:hover, &:active {
+        color: var(--ion-color-success);
+        text-decoration: none;
+    }
+}
+
+form {
+    ion-label {
+        font-weight: bold;
+    }
+}
+
+hr {
+    border-color: var(--ion-color-light-shade);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+input, textarea {
+    color: var(--ion-color-dark-tint) !important;
+    padding-left: 5px !important;
+    padding-right: 5px !important;
+}
+
+ion-alert {
+    .alert-checkbox-icon.sc-ion-alert-ios {
+        border-radius: unset;
+    }
+
+    div.alert-head {
+        display: none;
+    }
+
+    div.alert-message {
+        padding-top: 25px !important;;
+    }
+
+    div.alert-checkbox-group, div.alert-radio-group {
+        border: none !important;
+        margin-top: -25px;
+    }
+}
+
+ion-datetime, ion-input, ion-select, ion-textarea {
+    border-color: var(--ion-color-light-shade);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+}

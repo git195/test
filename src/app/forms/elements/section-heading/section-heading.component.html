@@ -1,0 +1,17 @@
+<mat-expansion-panel [expanded]="true" *ngIf="element.isVisible && hasChildren(element); else singleElement">
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <h6>{{element.text}}</h6>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <ion-grid class="section-heading">
+    <ion-row class="element" *ngFor="let element of element.children">
+      <ion-col>
+        <app-section-heading [element]="element" [formGroup]="formGroup" [isSubmitted]="isSubmitted"></app-section-heading>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</mat-expansion-panel>
+<ng-template #singleElement>
+  <app-element *ngIf="element.isVisible" [element]="element" [formGroup]="formGroup" [isSubmitted]="isSubmitted"></app-element>
+</ng-template>

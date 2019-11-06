@@ -1,0 +1,33 @@
+<ion-header>
+    <ion-toolbar color="success">
+        <ion-title>Business Unit</ion-title>
+        <ion-buttons slot="end">
+            <ion-icon (click)="dismiss()" name="close-circle-outline" size="large"></ion-icon>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <mat-tree [dataSource]="dataSource" [treeControl]="treeControl" class="mat-tree">
+        <mat-tree-node *matTreeNodeDef="let node" matTreeNodeToggle>
+            <li class="mat-tree-node">
+                <button mat-icon-button disabled></button>
+                <ion-item (click)="setBusinessUnit(node)" lines="none">{{node.name}}</ion-item>
+            </li>
+        </mat-tree-node>
+        <mat-nested-tree-node *matTreeNodeDef="let node; when: hasChild">
+            <li>
+                <div class="mat-tree-node">
+                    <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.name">
+                        <mat-icon class="mat-icon-rtl-mirror" matRipple>
+                            {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                        </mat-icon>
+                    </button>
+                    <ion-item (click)="setBusinessUnit(node)" lines="none">{{node.name}}</ion-item>
+                </div>
+                <ul [class.mat-tree-invisible]="!treeControl.isExpanded(node)">
+                    <ng-container matTreeNodeOutlet></ng-container>
+                </ul>
+            </li>
+        </mat-nested-tree-node>
+    </mat-tree>
+</ion-content>

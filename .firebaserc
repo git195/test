@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "solv-pwa",
+    "staging": "solv-pwa"
+  }
+}
